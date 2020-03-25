@@ -38,4 +38,12 @@ attr_reader :name, :capacity, :products
     end
     return products_of_category
   end
+
+  def details
+    details = {:name => @name, :capacity => @capacity.to_i}
+  end
+
+  def percentage_occupied
+    ((total_number_of_products.to_f / @capacity.to_f) * 100).round(2)
+  end
 end
