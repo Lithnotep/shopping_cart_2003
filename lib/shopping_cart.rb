@@ -28,4 +28,14 @@ attr_reader :name, :capacity, :products
       false
     end
   end
+
+  def products_by_category(category)
+    products_of_category = []
+    @products.each do |product|
+      if product.category == category
+        products_of_category << product
+      end
+    end
+    return products_of_category
+  end
 end
