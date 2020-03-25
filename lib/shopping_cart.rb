@@ -7,7 +7,6 @@ attr_reader :name, :capacity, :products
     @name = name
     @capacity = capacity
     @products = []
-    @is_full = false
   end
 
   def add_product(product)
@@ -20,5 +19,13 @@ attr_reader :name, :capacity, :products
       product_total += product.quantity.to_i
     end
     return product_total
+  end
+
+  def is_full?
+    if total_number_of_products >= @capacity.to_i
+      true
+    else
+      false
+    end
   end
 end
