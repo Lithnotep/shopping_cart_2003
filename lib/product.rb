@@ -1,6 +1,6 @@
 require 'pry'
 class Product
-  attr_reader :category, :name, :unit_price, :quantity :is_hoarded
+  attr_reader :category, :name, :unit_price, :quantity, :is_hoarded
 
   def initialize(category, name, unit_price, quantity)
     @category = category
