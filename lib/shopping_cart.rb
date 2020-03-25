@@ -1,6 +1,6 @@
 require 'pry'
 
-class Shopping_Cart
+class ShoppingCart
 attr_reader :name, :capacity, :products
 
   def initialize(name, capacity)
